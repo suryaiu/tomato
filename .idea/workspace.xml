@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67401ac-a949-40ec-87ec-53715b7c5b2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/me/alphar/gateway/GatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/me/alphar/auth/AuthApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/me/alphar/auth/config/ServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +50,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gateway/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/auth/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,10 +69,25 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\tomato\auth\src\main\resources" />
       <recent name="D:\GitHub\tomato\gateway\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="auth" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="me.alphar.auth.AuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gateway" />
       <extension name="coverage">
@@ -87,8 +111,19 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.1358225" />
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -107,7 +142,8 @@
       <updated>1587561904431</updated>
       <workItem from="1587561924431" duration="128000" />
       <workItem from="1587562132286" duration="1369000" />
-      <workItem from="1587565007126" duration="103000" />
+      <workItem from="1587565007126" duration="1277000" />
+      <workItem from="1587566301762" duration="545000" />
     </task>
     <servers />
   </component>
@@ -118,6 +154,54 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1530" height="280" key="GridCell.Tab.0.bottom" timestamp="1587566466551">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566466551" />
+    <state width="1530" height="280" key="GridCell.Tab.0.center" timestamp="1587566466551">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566466551" />
+    <state width="1530" height="280" key="GridCell.Tab.0.left" timestamp="1587566466550">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566466550" />
+    <state width="1530" height="280" key="GridCell.Tab.0.right" timestamp="1587566466551">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566466551" />
+    <state width="1530" height="280" key="GridCell.Tab.1.bottom" timestamp="1587566461465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566461465" />
+    <state width="1530" height="280" key="GridCell.Tab.1.center" timestamp="1587566461465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566461465" />
+    <state width="1530" height="280" key="GridCell.Tab.1.left" timestamp="1587566461465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566461465" />
+    <state width="1530" height="280" key="GridCell.Tab.1.right" timestamp="1587566461465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566461465" />
+    <state width="1530" height="280" key="GridCell.Tab.2.bottom" timestamp="1587566461466">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566461466" />
+    <state width="1530" height="280" key="GridCell.Tab.2.center" timestamp="1587566461465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566461465" />
+    <state width="1530" height="280" key="GridCell.Tab.2.left" timestamp="1587566461465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566461465" />
+    <state width="1530" height="280" key="GridCell.Tab.2.right" timestamp="1587566461465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1530" height="280" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587566461465" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1587565074012">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -126,9 +210,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="654" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587562135329" />
-    <state x="352" y="216" key="new project wizard" timestamp="1587564736462">
+    <state x="352" y="216" key="new project wizard" timestamp="1587565889281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="352" y="216" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587564736462" />
+    <state x="352" y="216" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587565889281" />
   </component>
 </project>
