@@ -7,10 +7,6 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:18080
-  security:
-    user:
-      name: tomato
-      password: 666666
 
 # 打开监控端点
 management:
