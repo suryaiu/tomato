@@ -1,5 +1,7 @@
 package me.alphar.auth;
 
+import com.google.common.collect.Lists;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -8,6 +10,7 @@ import org.springframework.stereotype.Service;
 public class AlpharUserDetailServiceImpl implements AlpharUserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        return null;
+        User.UserBuilder user = User.withUsername(s);
+        return new User(s, "{noop}123456", Lists.newArrayList());
     }
 }
