@@ -1,4 +1,4 @@
-package me.alphar.auth;
+package me.alphar.auth.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 
