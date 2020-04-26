@@ -12,4 +12,4 @@
     postman 测试：http://localhost:10020/oauth/token?grant_type=password&username=user&password=123456
 
 3. 登录
-![](https://i.loli.net/2020/04/26/VrihDJbyEMaAUpj.png)
+ ![登录](https://i.loli.net/2020/04/26/VrihDJbyEMaAUpj.png)
