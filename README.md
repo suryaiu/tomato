@@ -10,3 +10,6 @@
 2. 用户认证服务
     使用模拟数据（内存数据）测试获取token  
     postman 测试：http://localhost:10020/oauth/token?grant_type=password&username=user&password=123456
+
+3. 登录
+![](https://i.loli.net/2020/04/26/VrihDJbyEMaAUpj.png)

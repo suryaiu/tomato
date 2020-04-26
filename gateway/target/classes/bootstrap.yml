@@ -9,20 +9,12 @@ spring:
         locator:
           enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名称进行路由
       routes:
-        - id: txlcn-account-id
-          uri: lb://txlcn-account
+        - id: auth-id
+          uri: lb://auth
           predicates:
-            - Path=/account/**
-
-        - id: txlcn-storage-id
-          uri: lb://txlcn-storage
-          predicates:
-            - Path=/storage/**
-
-        - id: txlcn-order-id
-          uri: lb://txlcn-order
-          predicates:
-            - Path=/order/**
+          - Path=/webapi/auth/**
+          filters:
+            - StripPrefix=2
     nacos:
       discovery:
         server-addr: localhost:18080

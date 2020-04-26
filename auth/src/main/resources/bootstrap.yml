@@ -12,9 +12,17 @@ spring:
     url: jdbc:mysql://localhost:3306/d_tomato
     username: root
     password: 666666
+
 # 打开监控端点
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+#
+#security:
+#  oauth2:
+#    client:
+#      client-id: client
+#      client-secret: secret
+#      access-token-uri: /oauth/token
