@@ -63,7 +63,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .secret("{noop}secret")
                 .authorizedGrantTypes("authorization_code", "password")
                 .scopes("app")
-                .redirectUris("http://www.funtl.com");
+                .redirectUris("http://alphar.me");
 
     }
 
