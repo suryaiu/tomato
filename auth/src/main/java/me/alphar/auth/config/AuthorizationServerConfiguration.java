@@ -15,7 +15,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
 /**
- * 收取服务配置
+ * 授权服务配置
  * https://github.com/spring-projects/spring-security/blob/master/samples/boot/oauth2authorizationserver/src/main/java/sample/AuthorizationServerConfiguration.java
  */
 @Configuration
