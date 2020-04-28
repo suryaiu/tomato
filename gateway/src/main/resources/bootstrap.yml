@@ -10,11 +10,17 @@ spring:
           enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名称进行路由
       routes:
         - id: auth-id
-          uri: lb://auth
+          uri: lb://authserver
           predicates:
-          - Path=/webapi/auth/**
+          - Path=/webapi/authserver/**
           filters:
-            - StripPrefix=2
+          - StripPrefix=2
+        - id: user-id
+          uri: lb://userserver
+          predicates:
+          - Path=/webapi/userserver/**
+          filters:
+          - StripPrefix=2
     nacos:
       discovery:
         server-addr: localhost:18080

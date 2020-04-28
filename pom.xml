@@ -5,7 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>gateway</module>
-        <module>auth</module>
+        <module>auth-server</module>
+        <module>user-server</module>
+        <module>common-core</module>
     </modules>
 
     <parent>
@@ -66,6 +68,15 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- ... other dependency elements ... -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-bom</artifactId>
+                <version>5.1.2.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -154,10 +165,11 @@
     </build>
 
     <repositories>
+        <!-- ... possibly other repository elements ... -->
         <repository>
-            <id>ali-maven</id>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <id>spring-milestone</id>
+            <name>Spring Milestone Repository</name>
+            <url>https://repo.spring.io/milestone</url>
         </repository>
     </repositories>
-
 </project>

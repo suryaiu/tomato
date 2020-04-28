@@ -1,0 +1,29 @@
+server:
+  port: 10030
+spring:
+  application:
+    name: userserver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:18080
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/d_tomato
+    username: root
+    password: 666666
+
+# 打开监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+security:
+  oauth2:
+    client:
+      client-id: admin-client
+      client-secret: tomato
+    resource:
+      token-info-uri: http://authserver/oauth/check_token
