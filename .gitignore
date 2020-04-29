@@ -16,6 +16,9 @@ target/
 *.ipr
 *.iml
 *.iws
+.history/
+.vscode/
+.factorypath
 
 # logs #
 logs
