@@ -1,24 +1,25 @@
 package me.alphar.common.entity;
 
 import lombok.Data;
+import me.alphar.common.annotation.Comment;
 import me.alphar.common.core.BaseEntity;
 
 import java.time.LocalDate;
 
 @Data
 public class InnerUser extends BaseEntity {
-    /* 登录名称 */
+    @Comment("登录名称")
     private String loginName;
-    /* 真实名称 */
+    @Comment("真实名称")
     private String realName;
-    /* 密码 */
+    @Comment("密码")
     private String password;
-    /* 性别 */
+    @Comment("性别")
     private Integer gender;
-    /* 生日 */
+    @Comment("生日")
     private LocalDate birthday;
-    /* 用户状态 */
-    private Integer status;
-    /* 电话号码 */
+    @Comment("用户状态")
+    private Integer state;
+    @Comment("电话号码")
     private String phone;
 }

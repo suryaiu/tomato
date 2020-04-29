@@ -1,21 +1,24 @@
 package me.alphar.common.core;
 
 import lombok.Data;
+import me.alphar.common.annotation.Comment;
 
 import java.time.LocalDateTime;
 
 @Data
 public class BaseEntity {
-    /* 主键 */
+    @Comment("主键")
     private Long tid;
-    /* 创建时间 */
+    @Comment("创建时间")
     private LocalDateTime createTime;
-    /* 创建者 id */
+    @Comment("创建者id")
     private Long creatorTid;
-    /* 更新时间 */
+    @Comment("更新时间")
     private LocalDateTime updateTime;
-    /* 更新人主键 */
+    @Comment("更新人主键")
     private Long updaterTid;
-    /* 是否被删除 */
+    @Comment("是否被删除")
     private Boolean isDeleted;
+    @Comment("版本号(乐观锁)")
+    private Integer version;
 }
