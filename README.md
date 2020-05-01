@@ -12,10 +12,10 @@
     postman 测试：http://localhost:10020/oauth/token?grant_type=password&username=user&password=123456
 
 3. 登录
-![登录](./asserts/imgs/login.png)
+![登录](./assets/imgs/login.png)
 
 4. 主页
-![首页](./asserts/imgs/home.png)
+![首页](./assets/imgs/home.png)
 
 5. 获取token  
-![登录](./asserts/imgs/token.png)
+![登录](./assets/imgs/token.png)
