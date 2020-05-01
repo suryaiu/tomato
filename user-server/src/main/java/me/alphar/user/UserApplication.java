@@ -1,8 +1,9 @@
 package me.alphar.user;
 
-import me.alphar.common.config.AlpharResourceServerConfigurerAdapter;
-import me.alphar.common.config.PermitAllUrlProperties;
+import me.alphar.user.config.AlpharResourceServerConfigurerAdapter;
+import me.alphar.user.config.PermitAllUrlProperties;
 import me.alphar.user.config.ResourceServerConfig;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -13,6 +14,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableResourceServer
+@MapperScan("me.alphar.user.mapper")
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @Import({ResourceServerConfig.class, PermitAllUrlProperties.class, AlpharResourceServerConfigurerAdapter.class})
 public class UserApplication {

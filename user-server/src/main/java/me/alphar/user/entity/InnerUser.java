@@ -1,9 +1,9 @@
-package me.alphar.common.entity;
+package me.alphar.user.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-import me.alphar.common.annotation.Comment;
-import me.alphar.common.core.BaseEntity;
+import me.alphar.user.annotation.Comment;
+import me.alphar.user.core.BaseEntity;
 
 import java.time.LocalDate;
 

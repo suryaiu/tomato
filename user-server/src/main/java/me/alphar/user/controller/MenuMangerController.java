@@ -1,7 +1,7 @@
 package me.alphar.user.controller;
 
 import com.google.common.collect.Lists;
-import me.alphar.common.core.Res;
+import me.alphar.user.core.Res;
 import me.alphar.user.dto.MenuDTO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

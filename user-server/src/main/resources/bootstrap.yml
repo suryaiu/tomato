@@ -20,6 +20,7 @@ management:
       exposure:
         include: "*"
 
+
 security:
   oauth2:
     client:
@@ -27,3 +28,7 @@ security:
       client-secret: tomato
     resource:
       token-info-uri: http://authserver/oauth/check_token
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true

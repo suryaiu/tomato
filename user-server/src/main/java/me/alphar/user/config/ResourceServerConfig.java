@@ -18,7 +18,7 @@ public class ResourceServerConfig {
     public RestTemplate restTemplate() {
         RestTemplate restTemplate = new RestTemplate();
 
-        //负载均衡 https://blog.csdn.net/m0_37834471/article/details/83187119
+        // https://blog.csdn.net/m0_37834471/article/details/83187119
         //把 RemoteTokenServices 中的异常处理复制过来
         restTemplate.setErrorHandler(new DefaultResponseErrorHandler() {
             @Override

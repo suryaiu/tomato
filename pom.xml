@@ -7,7 +7,6 @@
         <module>gateway</module>
         <module>auth-server</module>
         <module>user-server</module>
-        <module>common-core</module>
     </modules>
 
     <parent>
