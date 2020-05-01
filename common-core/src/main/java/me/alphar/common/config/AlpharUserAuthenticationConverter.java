@@ -26,6 +26,7 @@ public class AlpharUserAuthenticationConverter extends DefaultUserAuthentication
                 authorities = user.getAuthorities();
                 principal = user;
             }
+            System.out.println(authorities);
             if (principal instanceof String && map.containsKey("user_id")) {
 //                UserDetails user = new UserDetails(
 //                        Convert.toLong(map.get("user_id"))

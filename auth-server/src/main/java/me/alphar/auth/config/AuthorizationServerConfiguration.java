@@ -99,7 +99,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Bean
     public TokenEnhancer tokenEnhancer() {
         return (accessToken, authentication) -> {
-            Object principal = authentication.getPrincipal();
+            // Object principal = authentication.getPrincipal();
             final Map<String, Object> additionalInfo = new HashMap<>(1);
 //            additionalInfo.put("user_id", user.getUserId());
 //            additionalInfo.put("name", user.getName());

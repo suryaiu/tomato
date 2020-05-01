@@ -14,7 +14,7 @@ import java.util.List;
 public class MenuMangerController {
 
     @GetMapping
-    public Res menuList() {
+    public Res<List<MenuDTO>> menuList() {
         List<MenuDTO> menuDTOList = Lists.newArrayList();
         List<MenuDTO> userSubMenu = Lists.newArrayList();
         userSubMenu.add(new MenuDTO("用户列表", 11, 11, "userList", null));
@@ -24,7 +24,7 @@ public class MenuMangerController {
                 Lists.newArrayList(new MenuDTO("角色列表", 21, 1, "roleList", null),
                         new MenuDTO("权限列表", 22, 2, "permissionList", null))));
 
-        return new Res(0, "suc", menuDTOList);
+        return new Res<>(0, "suc", menuDTOList);
     }
 
 }
