@@ -30,13 +30,12 @@ public class TableUtil {
 
     }
     public static void main(String[] args) {
-        UUID.randomUUID();
         genTableSql("me.alphar.common.entity.InnerUser", "inner_user");
     }
 
-    private static void genTableSql(String classPath, String tableName) {
+    private static void genTableSql(String path, String tableName) {
         try {
-            Class clazz = Class.forName(classPath);
+            Class<?> clazz = Class.forName(path);
             List<Field> fieldList = new ArrayList<>(50);
             while (clazz != null) {
                 List<Field> fieldList1 = Arrays.asList(clazz.getDeclaredFields());
@@ -54,9 +53,15 @@ public class TableUtil {
                     comment = annotation.value();
                 }
                 String javaType = javaType2JdbcType.get(field.getType().getSimpleName());
-                sql.append("`" + camelToUnderline(field.getName()).toLowerCase() + "`")
+                sql
+                        .append("`")
+                        .append(camelToUnderline(field.getName()).toLowerCase())
+                        .append("`")
                         .append(StrUtil.SPACE)
-                        .append(javaType).append(" NOT NULL COMMENT '").append(comment).append("',");
+                        .append(javaType)
+                        .append(" NOT NULL COMMENT '")
+                        .append(comment)
+                        .append("',");
             }
             sql.append("PRIMARY KEY (`tid`)").append(") ENGINE=InnoDB DEFAULT CHARSET=utf8;");
             System.out.println(sql);
@@ -69,7 +74,7 @@ public class TableUtil {
         if (null == camelString || "".equals(camelString)) return camelString;
         camelString = String.valueOf(camelString.charAt(0)).toUpperCase().concat(camelString.substring(1));
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         Pattern pattern = Pattern.compile("[A-Z]([a-z\\d]+)?");    //字母、数字、下划线
         Matcher matcher = pattern.matcher(camelString);
         while (matcher.find()) {
