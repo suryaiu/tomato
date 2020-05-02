@@ -2,9 +2,14 @@ package me.alphar.user.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import me.alphar.user.core.PagePara;
+import me.alphar.user.core.PageResult;
 import me.alphar.user.entity.InnerUser;
+import me.alphar.user.vo.InnerUserVO;
 
 public interface IInnerUserService extends IService<InnerUser> {
 
     int insert(InnerUser user);
+
+    PageResult<InnerUserVO> getUserPage(PagePara pagePara);
 }

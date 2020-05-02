@@ -21,5 +21,6 @@ public class UserApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(UserApplication.class, args);
+        System.out.println("user服务启动成功");
     }
 }

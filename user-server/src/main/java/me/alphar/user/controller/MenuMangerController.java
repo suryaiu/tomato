@@ -24,7 +24,7 @@ public class MenuMangerController {
                 Lists.newArrayList(new MenuDTO("角色列表", 21, 1, "roleList", null),
                         new MenuDTO("权限列表", 22, 2, "permissionList", null))));
 
-        return new Res<>(0, "suc", menuDTOList);
+        return Res.success("操作成功", menuDTOList);
     }
 
 }
