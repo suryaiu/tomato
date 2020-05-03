@@ -11,5 +11,9 @@ public interface IInnerUserService extends IService<InnerUser> {
 
     int insert(InnerUser user);
 
+    int update(InnerUser user);
+
     PageResult<InnerUserVO> getUserPage(PagePara pagePara);
+
+    InnerUserVO getByTid(Long tid);
 }

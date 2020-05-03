@@ -1,7 +1,6 @@
 package me.alphar.user.core;
 
 import lombok.Data;
-import org.bouncycastle.jcajce.provider.symmetric.AES;
 
 @Data
 public class Res<T> {

@@ -10,8 +10,21 @@ import me.alphar.user.core.PageResult;
 
 import java.util.List;
 
+/**
+ * 分页查询方法封装
+ * @param <E> 实体类
+ * @param <V> 返回给嵌套的VO类
+ */
 public interface CommonService<E, V> {
 
+    /**
+     *
+     * @param queryWrapper 查询条件
+     * @param pagePara 分页参数
+     * @param mapper mapper
+     * @param result 分页结果
+     * @return list
+     */
     default List<E> getPageList(QueryWrapper<E> queryWrapper, PagePara pagePara,
                                 BaseMapper mapper, PageResult<V> result) {
         Page dbPage;

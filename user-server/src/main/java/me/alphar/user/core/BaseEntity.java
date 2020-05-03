@@ -2,13 +2,15 @@ package me.alphar.user.core;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import me.alphar.user.annotation.Comment;
-
 import java.time.LocalDateTime;
 
 @Data
 public class BaseEntity {
+
+    @TableId
     @Comment("主键")
     @TableField(fill = FieldFill.INSERT)
     private Long tid;

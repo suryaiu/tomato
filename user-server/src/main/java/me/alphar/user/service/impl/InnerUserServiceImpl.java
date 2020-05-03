@@ -28,6 +28,11 @@ public class InnerUserServiceImpl extends ServiceImpl<InnerUserMapper, InnerUser
     }
 
     @Override
+    public int update(InnerUser user) {
+        return innerUserMapper.updateById(user);
+    }
+
+    @Override
     public PageResult<InnerUserVO> getUserPage(PagePara pagePara) {
         if (pagePara == null || pagePara.getPageSize() == null || pagePara.getCurrPage() == null) {
             throw new BusinessException("分页参数有误");
@@ -39,5 +44,14 @@ public class InnerUserServiceImpl extends ServiceImpl<InnerUserMapper, InnerUser
         List<InnerUserVO> voList = InnerUserVO.transferVoList(pageList);
         result.setList(voList);
         return result;
+    }
+
+    @Override
+    public InnerUserVO getByTid(Long tid) {
+        if (tid == null) {
+            throw new BusinessException("住键不能为空");
+        }
+        InnerUser innerUser = innerUserMapper.selectById(tid);
+        return InnerUserVO.transferVO(innerUser);
     }
 }
