@@ -13,7 +13,9 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
         IdGenerator idGenerator = new IdGenerator();
-        this.strictInsertFill(metaObject, "tid", Long.class, idGenerator.getGuid());
+        long guid = idGenerator.getGuid();
+        System.out.println(guid);
+        this.strictInsertFill(metaObject, "tid", Long.class, guid);
         this.strictInsertFill(metaObject, "createTime", LocalDateTime.class, LocalDateTime.now());
         this.strictInsertFill(metaObject, "creatorTid", Long.class, Long.valueOf(1));
         this.strictInsertFill(metaObject, "updateTime", LocalDateTime.class, LocalDateTime.now());

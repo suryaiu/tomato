@@ -32,8 +32,24 @@ management:
       exposure:
         include: "*"
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 60000
+  shareSecurityContext: true
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
 feign:
   httpclient:
     enabled: false
   okhttp:
+    enabled: true
+  hystrix:
     enabled: true

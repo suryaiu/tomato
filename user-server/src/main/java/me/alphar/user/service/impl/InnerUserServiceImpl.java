@@ -4,6 +4,8 @@ import cn.hutool.core.collection.CollectionUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import me.alphar.core.ex.BusinessException;
+import me.alphar.core.service.PasswordDecode;
+import me.alphar.core.utils.CommonUtil;
 import me.alphar.user.core.PagePara;
 import me.alphar.user.core.PageResult;
 import me.alphar.core.entity.InnerUser;;
@@ -13,6 +15,7 @@ import me.alphar.user.service.IInnerUserService;
 import me.alphar.user.vo.InnerUserVO;
 import org.apache.ibatis.javassist.runtime.Inner;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
@@ -25,13 +28,25 @@ public class InnerUserServiceImpl extends ServiceImpl<InnerUserMapper, InnerUser
     @Resource
     private InnerUserMapper innerUserMapper;
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public int insert(InnerUser user) {
-        return innerUserMapper.insert(user);
+        user.setState(0);
+        int insertNum = innerUserMapper.insert(user);
+        String decryptPassword = PasswordDecode.decryptPassword(user.getLoginName(), user.getPassword());
+        String passwordMD5 = CommonUtil.getPasswordMD5(user.getTid(), decryptPassword);
+        user.setPassword(passwordMD5);
+        innerUserMapper.updateById(user);
+        return insertNum;
     }
 
     @Override
     public int update(InnerUser user) {
+        if (!StringUtils.isEmpty(user.getPassword())) {
+            String decryptPassword = PasswordDecode.decryptPassword(user.getLoginName(), user.getPassword());
+            String passwordMD5 = CommonUtil.getPasswordMD5(user.getTid(), decryptPassword);
+            user.setPassword(passwordMD5);
+        }
         return innerUserMapper.updateById(user);
     }
 

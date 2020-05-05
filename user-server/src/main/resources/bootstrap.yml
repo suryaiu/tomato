@@ -36,6 +36,18 @@ feign:
     enabled: false
   okhttp:
     enabled: true
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 60000
+  shareSecurityContext: true
 
 mybatis-plus:
   configuration:

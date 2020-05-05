@@ -35,3 +35,19 @@ feign:
     enabled: false
   okhttp:
     enabled: true
+  hystrix:
+    enabled: true
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 60000
+  shareSecurityContext: true
