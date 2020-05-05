@@ -19,3 +19,6 @@
 
 5. 获取token  
 ![登录](./assets/imgs/token.png)
+
+6. 用户管理
+![用户管理](https://i.loli.net/2020/05/05/4eEUHhWgjP6KkJQ.png)
