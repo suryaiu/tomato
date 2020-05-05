@@ -3,7 +3,7 @@ package me.alphar.user.vo;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import lombok.Data;
-import me.alphar.user.entity.InnerUser;
+import me.alphar.core.entity.InnerUser;;
 import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;

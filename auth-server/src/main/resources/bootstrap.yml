@@ -19,10 +19,19 @@ management:
     web:
       exposure:
         include: "*"
+
 #
-#security:
-#  oauth2:
-#    client:
-#      client-id: client
-#      client-secret: secret
-#      access-token-uri: /oauth/token
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://authserver/oauth/check_token
+    client:
+      client-id: admin-client
+      client-secret: tomato
+      permit-all-urls:
+        - '/innerUser/api/login/**'
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true

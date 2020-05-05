@@ -31,3 +31,9 @@ management:
     web:
       exposure:
         include: "*"
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true

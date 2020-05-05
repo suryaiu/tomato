@@ -1,6 +1,6 @@
 package me.alphar.auth.config;
 
-import me.alphar.auth.service.AlpharUserDetailsService;
+import me.alphar.core.service.TmUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -31,17 +31,17 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     private RedisConnectionFactory redisConnectionFactory;
 
-    private AlpharUserDetailsService alpharUserDetailsService;
+    private TmUserDetailsService tmUserDetailsService;
 
 //    @Autowired
 //    private BCryptPasswordEncoder passwordEncoder;
 
     public AuthorizationServerConfiguration(AuthenticationConfiguration authenticationConfiguration,
                                             RedisConnectionFactory redisConnectionFactory,
-                                            AlpharUserDetailsService alpharUserDetailsService) throws Exception {
+                                            TmUserDetailsService tmUserDetailsService) throws Exception {
         this.authenticationManager = authenticationConfiguration.getAuthenticationManager();
         this.redisConnectionFactory = redisConnectionFactory;
-        this.alpharUserDetailsService = alpharUserDetailsService;
+        this.tmUserDetailsService = tmUserDetailsService;
     }
 
     @Override
@@ -73,7 +73,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     }
 
     @Override
-    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+    public void configure(AuthorizationServerSecurityConfigurer security) {
         security
                 .tokenKeyAccess("permitAll()")
                 .checkTokenAccess("permitAll()")
@@ -81,11 +81,11 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     }
 
     @Override
-    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
         endpoints
                 .authenticationManager(this.authenticationManager)
                 .tokenStore(tokenStore())
-                .userDetailsService(alpharUserDetailsService)
+                .userDetailsService(tmUserDetailsService)
                 .tokenEnhancer(tokenEnhancer());
     }
 

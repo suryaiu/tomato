@@ -1,7 +1,7 @@
 package me.alphar.user.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
-import me.alphar.user.util.IdGenerator;
+import me.alphar.core.utils.IdGenerator;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
 

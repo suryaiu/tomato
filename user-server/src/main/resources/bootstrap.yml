@@ -23,11 +23,19 @@ management:
 
 security:
   oauth2:
+    resource:
+      token-info-uri: http://authserver/oauth/check_token
     client:
       client-id: admin-client
       client-secret: tomato
-    resource:
-      token-info-uri: http://authserver/oauth/check_token
+      permit-all-urls:
+        - '/innerUser/api/login/**'
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
 
 mybatis-plus:
   configuration:

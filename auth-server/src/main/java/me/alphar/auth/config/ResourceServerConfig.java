@@ -1,4 +1,4 @@
-//package me.alphar.user.config;
+//package me.alphar.auth.config;
 //
 //import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 //import org.springframework.context.annotation.Bean;

@@ -2,8 +2,8 @@ package me.alphar.user.controller;
 
 import me.alphar.user.core.PagePara;
 import me.alphar.user.core.PageResult;
-import me.alphar.user.core.Res;
-import me.alphar.user.entity.InnerUser;
+import me.alphar.core.Res;
+import me.alphar.core.entity.InnerUser;;
 import me.alphar.user.service.IInnerUserService;
 import me.alphar.user.vo.InnerUserVO;
 import org.springframework.web.bind.annotation.*;
